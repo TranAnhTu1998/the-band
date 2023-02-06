@@ -1,0 +1,540 @@
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --hover-color: #ccc;
+  --red-color: #df2c32;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-white {
+  color: var(--white-color) !important;
+}
+
+.mt-8 {
+  margin-top: 8px !important;
+}
+
+.mt-16 {
+  margin-top: 16px !important;
+}
+
+.full-right {
+  float: right !important;
+}
+
+.clear {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.my-love {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-love_btn {
+  padding: 5px 10px;
+  color: azure;
+  background-color: #df2c32;
+  border-radius: 9px;
+  cursor: pointer;
+  position: absolute;
+
+  /* border: none; */
+}
+
+.my-love_btn:hover .my-love_img {
+  display: block;
+}
+
+.my-love_img {
+  margin: 5px;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  z-index: 1;
+  display: none;
+}
+
+#main {
+}
+
+/*Từ tổng quan đến chi tiết:
+1. Từ ngoài vào trong,
+2. Từ trên xuống dưới,
+3 từ phải sang trái */
+/* 
+1. Vị trí
+2. Kích thước (weith, heith)
+3. Màu sắc
+4. Kiểu dạng (tròn, vuông, tam giác)
+*/
+#header {
+  /* 1. Vị trí */
+  /* 2. Kích thước */
+  width: 100%;
+  height: 46px;
+
+  /* 3. Màu sắc */
+  background-color: var(--black-color);
+  /* 4. Kiểu dạng */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1;
+  /* border: ;
+  border-radius: ;*/
+}
+
+#slider {
+  position: relative;
+  margin-top: 46px;
+  padding-top: 50%;
+  background: url("C:/Users/tutra/Desktop/confess_love/assets/img/slider/slider1.jpg")
+    top center / cover no-repeat;
+  /* background: url("/assets/img/slider/slider1.jpg") top center / cover no-repeat; */
+  /* min-height: 600px; */
+  /* background-color: #333; */
+
+  /* height: 1500px; */
+}
+
+#slider .text-content {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 52px;
+
+  color: var(--white-color);
+}
+
+#slider .text-heading {
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 2.4rem;
+}
+
+#slider .text-description {
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+#content {
+}
+
+#content .content-section {
+  max-width: 800px;
+  /* text-align: center; */
+  padding: 64px 16px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 112px;
+}
+
+#content .section-heading {
+  text-align: center;
+  letter-spacing: 4px;
+  font-size: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+#content .section-sub-heading {
+  text-align: center;
+  font-size: 15px;
+  margin: 15px 0;
+  font-family: "Lato";
+  font-style: italic;
+  opacity: 0.6;
+}
+
+#content .about-text {
+  text-align: justify;
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+/* Contact */
+.contact-content {
+  margin-top: 48px;
+}
+
+.contact-info {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.contact-info > p > i[class*="fa-"] {
+  display: inline-block;
+  width: 30px;
+}
+
+.contact-form {
+  font-size: 20px;
+  position: relative;
+}
+
+.contact-form .form-control {
+  padding: 10px;
+  border: 1px solid var(--hover-color);
+  width: 100%;
+}
+
+.form-submit-btn {
+  display: block;
+  float: right;
+  padding: 8px 16px;
+  border: none;
+  font-size: 15px;
+  color: var(--white-color);
+  background-color: var(--black-color);
+  position: absolute;
+  right: 15px;
+  outline: none;
+}
+.form-submit-btn:hover {
+  color: var(--black-color);
+  background-color: var(--hover-color);
+  cursor: pointer;
+}
+
+/* Map section */
+.map-section img {
+  width: 100%;
+}
+
+/* Tickets selection */
+.tickets-list {
+  background-color: var(--white-color);
+  list-style-type: none;
+  margin-top: 40px;
+}
+
+.tickets-list .september,
+.tickets-list .october,
+.tickets-list .november {
+  padding: 8px 16px;
+  color: #757575;
+  border-bottom: 1px solid #757575;
+  /* text-decoration: none; */
+}
+
+.tickets-list .september {
+}
+
+.tickets-list .october {
+}
+
+.tickets-list .november {
+}
+
+.tickets-list .sold-out {
+  margin-left: 16px;
+  padding: 4px 6px;
+  font-size: 12px;
+
+  background-color: var(--red-color);
+  color: var(--white-color);
+}
+
+.tickets-list .number-ticket {
+  float: right;
+  width: 24px;
+  height: 24px;
+  font-size: 15px;
+  color: var(--white-color);
+  background-color: var(--black-color);
+  border-radius: 50%;
+  padding: 1px 8px;
+  text-align: center;
+  line-height: 24px;
+  margin-top: -3px;
+}
+
+/* Tour selection */
+.tour-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0px;
+}
+
+.tour-list .tour-item {
+  padding: 0 0;
+  width: calc(100% / 3);
+  background-color: var(--white-color);
+  margin: 0 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  /* padding-bottom: 18px; */
+}
+
+.tour-list .tour-item:first-child {
+  margin-left: 0;
+}
+.tour-list .tour-item:last-child {
+  margin-right: 0;
+}
+
+.tour-list .tour-img {
+  width: 100%;
+}
+
+.tour-list .tour-img:hover {
+  opacity: 0.8;
+}
+
+.tour-list .tour-info {
+  padding: 0 16px;
+}
+
+.tour-list .tour-city {
+  margin: 15px 0;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.tour-list .tour-time {
+  margin: 15px 0;
+  font-size: 12px;
+  font-style: italic;
+  color: var(--black-color);
+  opacity: 0.8;
+}
+
+.tour-list .tour-description {
+  margin: 15px 0;
+  text-align: left;
+  font-size: 15px;
+  color: var(--black-color);
+  line-height: 20px;
+}
+
+.tour-list .tour-ticket-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-size: 15px;
+  margin-bottom: 18px;
+  border: none;
+  text-decoration: none;
+}
+.tour-list .tour-ticket-btn:hover {
+  color: var(--black-color);
+  background-color: var(--hover-color);
+  cursor: pointer;
+}
+
+.tour-section {
+  background-color: var(--black-color);
+}
+
+/* Content Selection */
+#content .member-list {
+  display: flex;
+  justify-content: space-between;
+  /* float: left; */
+  padding: 32px 0;
+}
+
+#content .member-item {
+  /* align-items: center; */
+  text-align: center;
+  width: calc(100% / 3);
+}
+
+#content .member-name {
+  margin: 15px 0;
+}
+
+#content .member-img {
+  width: 50%;
+  border-radius: 2px;
+}
+
+/* row-colum */
+.row {
+  /* margin-left: -15px;
+  margin-right: -15px; */
+}
+
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.col {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.col-half {
+  width: 50%;
+}
+
+.col-third {
+  width: calc(100% / 3);
+}
+
+/* navication */
+#nav {
+  display: inline-block;
+}
+
+#nav,
+.subnav {
+  list-style-type: none;
+}
+
+#nav li {
+  display: inline-block;
+  position: relative;
+}
+
+#nav > li:hover > .subnav {
+  display: block;
+}
+
+#nav > li > a {
+  display: inline-block;
+  padding: 0 24px;
+  line-height: 46px;
+  color: #fff;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#nav > li:hover > a {
+  background-color: var(--hover-color);
+  color: var(--black-color);
+}
+
+#nav .subnav {
+  position: absolute;
+  display: none;
+
+  top: 100%;
+  left: 0;
+
+  background-color: var(--white-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav > li {
+  display: block;
+
+  min-width: 160px;
+  color: var(--black-color);
+  background-color: var(--white-color);
+}
+
+#nav .subnav > li > a {
+  line-height: 38px;
+  display: block;
+  padding: 0 12px;
+  color: var(--black-color);
+  background-color: var(--white-color);
+  text-decoration: none;
+}
+
+#nav .subnav > li:hover a {
+  background-color: var(--hover-color);
+}
+
+#header {
+  overflow: hidden;
+}
+
+#header .menu-btn,
+#header .search-btn {
+  padding: 0 16px;
+  margin-left: auto;
+  float: right;
+}
+
+#header .menu-btn {
+  display: none;
+}
+
+#header .search-btn:hover {
+  cursor: pointer;
+  background-color: red;
+}
+
+#header .menu-btn:hover {
+  color: var(--black-color);
+  background-color: var(--hover-color);
+}
+
+#header .menu-btn:hover .menu-icon {
+  color: var(--black-color);
+}
+
+#header .menu-icon,
+#header .search-icon {
+  line-height: 46px;
+  font-size: 20px;
+  color: var(--white-color);
+}
+
+#header .menu-icon {
+}
+
+#footer {
+  padding: 64px 16px;
+  text-align: center;
+}
+
+#footer .socials-list {
+  font-size: 24px;
+}
+
+#footer .socials-list a {
+  text-decoration: none;
+  color: #757575;
+}
+
+#footer .icon-socials:hover {
+  opacity: 0.6;
+}
+
+#footer .copyright {
+  margin: 15px 0;
+  font-size: 15px;
+  color: #757575;
+  background-color: #f7f7f7;
+}
+
+#footer .copyright a {
+  color: #757575;
+}
+
+
